@@ -1,5 +1,5 @@
 console.info('**************************************');
-console.info('::Coding Challenge #1::');
+console.info('::Coding Challenge #1:: Fundamentals 1-datatyles, operators');
 
 //data 1:
 let markMass = 78;
