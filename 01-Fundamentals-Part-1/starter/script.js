@@ -135,3 +135,34 @@ console.log(x1,y1); // 10 10
 
 const averageAge = (ageNitesh + ageNikhil) /2; //used grouping operator gives correct result with higher precedence
 console.log(ageNitesh, ageNikhil, averageAge);
+
+
+console.log('---String & template literal');
+const firstName = 'Nitesh';
+const job3 = 'learner';
+const birthYear2 = 1990;
+const year2 = 2021;
+
+const nitesh = "I'm " + firstName + ", a " + (year2 - birthYear2) + " years old " + job3 + '!';
+console.log(nitesh);
+
+//template literals
+const nikhil = `I'm ${firstName}, a ${year2 - birthYear2} years old ${job3}!`
+console.log(nikhil);
+
+//use template literals at all places
+//use template literals for multiline strings, earlier we used \n\ to end line and started on new line, example below of old way
+console.log('String with \n\
+multiple \n\
+lines');
+
+
+console.log('---If / else control structure'); //allows us to have control over the blocks of code, gives us control over how code works
+const age2 = 15;
+if(age2 >=18){ 
+    console.log('Nitesh old enough to drive🚗'); //win+. shortcut key for emoticon
+}
+else {
+    const yearLeft = 18 -age2;
+    console.log(`Nitesh not old enough to drive. 🚲. Wait for ${ yearLeft } years`);
+}
