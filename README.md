@@ -1,5 +1,5 @@
 # The-Complete-Javascript-Course-Udemy-Self-Relearn-Curve
-The Complete JavaScript Course: From Zero To Expert, Udemy course together with the author and solving all challenges and the assignments together.
+[The Complete JavaScript Course: From Zero To Expert](https://www.udemy.com/course/the-complete-javascript-course/), Udemy course together with the author and solving all challenges and the assignments together.
 
 # Solved course material can be found under starter folder of each section.
 
