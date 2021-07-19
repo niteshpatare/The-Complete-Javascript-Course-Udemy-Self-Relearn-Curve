@@ -63,3 +63,19 @@ population +
 ' million people speak ' + 
 language;
 console.log(DESCRIPTION);
+
+
+console.log('---String & template literals');
+const description2 = `${country} is in ${continent}, and its ${population} million people speak ${language}`;
+console.log(description2);
+
+
+console.log('---If/Else control statement');
+//population =13; 
+//uncomment above lin and change values form 13 to 130 and check console
+if(population > 23) {
+    console.log(`${country}'s populaton is above average`);
+}
+else {
+    console.log(`${country}'s population is ${33-population} below average`);
+}
