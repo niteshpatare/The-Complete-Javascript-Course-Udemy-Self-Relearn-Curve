@@ -1,5 +1,11 @@
 # The-Complete-Javascript-Course-Udemy-Self-Relearn-Curve
-[The Complete JavaScript Course: From Zero To Expert](https://www.udemy.com/course/the-complete-javascript-course/), Udemy course together with the author and solving all challenges and the assignments together.
+
+[1. The Complete JavaScript Course: From Zero To Expert](https://www.udemy.com/course/the-complete-javascript-course/), Udemy course together with the author and solving all challenges and the assignments together.
+
+[2. ES6 JavaScript: The complete developers guide](https://www.udemy.com/course/javascript-es6-tutorial/), Udemy course together with the author and solving all challenges and the assignments together. Chapter 19.
+
+
+
 
 # Solved course material can be found under starter folder of each section.
 
