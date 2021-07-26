@@ -17,15 +17,15 @@ function handlePosts() {
       savePost(posts[i]);
     }
 
-    //new forEach array helper method - completed
-    console.log("---New forEach array helper method:1");   
+//new forEach array helper method - completed
+console.log("---New forEach array helper method: #1");   
     posts.forEach(function(post){
         savePost(post);
     });
 }
 handlePosts();
 
-console.log("---Processing values:2");
+console.log("---Processing values: #2");
 //calculate area of image w*h and store in new Array
   var images = [
     { height: 10, width: 30 },
@@ -38,7 +38,7 @@ console.log("---Processing values:2");
   });
   console.log(areas); //[300, 1800, 1728]
 
-console.log("---Plucking values:3");
+console.log("---Plucking values: #3");
 //show height*width in new array heights
   var images = [
     { height: '34px', width: '39px' },
@@ -50,7 +50,7 @@ console.log("---Plucking values:3");
   });
   console.log(heights); //["34px", "54px", "83px"]
 
-console.log("---Calculating values:4");
+console.log("---Calculating values: #4");
 //calculate distance/time
   var trips = [
     { distance: 34, time: 10 },
@@ -63,7 +63,7 @@ console.log("---Calculating values:4");
   console.log(speeds); //[3.4, 1.8, 2.36]
 
 
-console.log("---Really Hard: Implementating PLUCK:5");
+console.log("---Really Hard: Implementating PLUCK: #5");
 //pluck function must accept array and property name as input to call and return an array with values of that properties as new array
 //works in browser case #1
   var paints = [{ color: 'red'}, {color: 'blue'}, {color: 'yellow'}]
@@ -89,7 +89,7 @@ console.log("---Really Hard: Implementating PLUCK:5");
   console.log(colors);
 
 
-  console.log("---Filtering Values:6");
+  console.log("---Filtering Values: #6");
   //find array of numbers and return new array with values > 50
   var numbers = [15, 25, 35, 45, 55, 65, 75, 85, 95];
   var filteredNumbers = numbers.filter(function(num){
@@ -98,7 +98,7 @@ console.log("---Really Hard: Implementating PLUCK:5");
   console.log(filteredNumbers);
 
 
-  console.log("---Handling permissions with filter:7");
+  console.log("---Handling permissions with filter: #7");
 //filter array of user, returning only those with admin access
   var users = [
     { id: 1, admin: true },  
@@ -113,7 +113,7 @@ console.log("---Really Hard: Implementating PLUCK:5");
   console.log(filteredUsers);
 
 
-  console.log("---Implement Reject:8");
+  console.log("---Implement Reject: #8");
   //create function reject, if function returns true, the number must not be included in new array
 
    //way1 - check of number > 15 and return numbers less than 15 in new array
@@ -137,4 +137,46 @@ console.log("---Really Hard: Implementating PLUCK:5");
    console.log(lessThanFifteen); // [10]
 
 
-console.log("---Finding admin users:9");
+console.log("---Finding admin users:#9");
+//find user who admin value us true
+var users = [
+    { id: 1, admin: false },
+    { id: 2, admin: false },
+    { id: 3, admin: true }
+  ];
+  var admin = users.find(function(user){
+      return user.admin === true;
+  });
+  console.log(admin); //{id: 3, admin: true}
+
+
+console.log("---Whats your balance:#10");
+//return account with blance 1728
+var accounts = [
+    { balance: -10 },
+    { balance: 12 },
+    { balance: 0 }
+  ];
+  
+  var account = accounts.find(function(acc){
+      return acc.balance === 12;
+  });
+  console.log(account);
+
+
+console.log("---Custom findWhere helper:#11");
+var ladders = [
+    { id:1, height: 25 },
+    { id:2, height: 20 },
+    { id:3, height: 29 }
+];
+var foundLadder;
+function findWhere(ladders, criteria) {
+  foundLadder  = ladders.find(function(ladder){
+      console.log(ladder.height, Object.keys(ladder)[1], criteria.height, Object.keys(criteria)[0]);
+      return (Object.keys(ladder)[1] === Object.keys(criteria)[0]) && (ladder.height === criteria.height);
+  });
+  return foundLadder;
+}
+findWhere(ladders, { height: 20 });
+console.log(foundLadder);
