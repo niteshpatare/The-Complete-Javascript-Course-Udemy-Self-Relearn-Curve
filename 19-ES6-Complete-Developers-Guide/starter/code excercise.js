@@ -164,7 +164,7 @@ var accounts = [
   console.log(account);
 
 
-console.log("---Custom findWhere helper:#11");
+console.log("---Hard Custom findWhere helper:#11");
 var ladders = [
     { id:1, height: 25 },
     { id:2, height: 20 },
@@ -182,13 +182,13 @@ findWhere(ladders, { height: 20 });
 console.log(foundLadder);
 
 
-console.log("---every & some validation example: pre#12");
+console.log("---Hard: every & some validation example: pre#12");
   function Field(value){
     this.value = value
   };
   const username = new Field("Nitesh");
   const password = new Field("everysome");
-  Field.prototype.validate = Function(){
+  Field.prototype.validate = function(){
    return this.value.length >0;
   }
 
@@ -236,3 +236,51 @@ console.log("---every & some validation example: pre#12");
   var inProgress = requests.some(function(request){
       return request.status === 'pending';
   });
+
+
+  console.log("---Distance travelled: #14");
+  //calculate sum of distance travelled
+  var trips = [{ distance: 34 }, { distance: 12 } , { distance: 1 }];
+  var totalDistance = trips.reduce(function(previous, trip){ 
+    return previous + trip.distance;
+}, 0);
+console.log(totalDistance);
+
+  console.log("---Reducing properties: #15");
+  var desks = [
+    { type: 'sitting' },
+    { type: 'standing' },
+    { type: 'sitting' },
+    { type: 'sitting' },
+    { type: 'standing' }
+  ];
+  var deskTypes = desks.reduce(function(previous, desk) {
+      if(desk.type==='sitting') previous.sitting++;
+      if(desk.type === 'standing') previous.standing++;
+      return previous;
+  }, { sitting: 0, standing: 0 });
+  console.log(deskTypes);
+
+
+  console.log("---Custom unique helper: #16");
+  let numbers2 = [1, 1, 2, 3, 4, 4, 5];
+  let numFound, currentFound;
+  function unique(numbers2) {
+    numFound = numbers2.reduce(function(previous, current){
+          currentFound = previous.find(function(curr){
+            if(current==curr) { 
+              console.log(curr); 
+              return current; 
+            }
+          });
+          if(!currentFound) previous.push(current);
+          return previous;
+    }, []);
+    return numFound;
+  }
+  unique(numbers2);
+  console.log(numFound);
+//first use reducer and loop through all to return an [] array
+//use find to check if our previous array[] has curr number
+//i.e. if current does not have curr(from prev) return current
+//if !current returned the push in previous array
