@@ -321,4 +321,26 @@ console.log(totalDistance);
   }
 
 
-  
+  console.log("---Refactoring keyword function: #21");
+  const fibonacci = n => {
+    if (n < 3) return 1;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  }
+
+
+  console.log("---Arrow function arent always the solution: #22");
+  //not working with arrow functions
+  const profile = {
+    name: 'Alex',
+    getName:  () => {
+        return `${this.name}`
+    }
+};
+
+//working using function declaration thats anonymous function
+const profile = {
+  name: 'Alex',
+  getName: function (){
+      return `${this.name}`
+  }
+};
