@@ -283,4 +283,42 @@ console.log(totalDistance);
 //first use reducer and loop through all to return an [] array
 //use find to check if our previous array[] has curr number
 //i.e. if current does not have curr(from prev) return current
-//if !current returned the push in previous array
+//if !current returned then push in previous array and return that previous array from fun to display on console
+
+
+  console.log("---A constant excercise of letting variables be variables: #17");
+  const name = 'Nitesh';
+  let age = 32;
+  const dateOfBirth = '27/03/1990'
+
+
+  console.log("---const / let refactoring: #18");
+  //replace var with const/let
+  const statuses = [ 
+    { code: 'OK', response: 'Request successful' },
+    { code: 'FAILED', response: 'There was an error with your request' },
+    { code: 'PENDING', response: 'Your reqeust is still pending' }
+  ];
+  let message = '';
+  const currentCode = 'OK';
+  
+  for (var i = 0; i < statuses.length; i++) {
+    if (statuses[i].code === currentCode) {
+      message = statuses[i].response;
+    }
+  }
+
+
+  console.log("---Template strings in practise: #19");
+  function doubleMessage(number) {
+    return `Your number doubled is ${(2 * number)}`;
+  }
+
+
+  console.log("---Name helpers: #20");
+  function fullName(firstName, lastName) {
+    return `${firstName} ${lastName}`;
+  }
+
+
+  
