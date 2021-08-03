@@ -1,5 +1,8 @@
 
 //https://www.udemy.com/course/javascript-es6-tutorial/
+//Contains all solved challenges from course
+
+
 console.log('---Moving away from for loop: Use forEach');
 
 function savePost (post){
@@ -338,9 +341,135 @@ console.log(totalDistance);
 };
 
 //working using function declaration thats anonymous function
-const profile = {
+const profile2 = {
   name: 'Alex',
   getName: function (){
       return `${this.name}`
   }
 };
+
+console.log("---Multiple properties with enhanced object literal notation: #23");
+const red = '#ff0000';
+const blue = '#0000ff';
+const COLORS = { red, blue };
+
+
+console.log("---Condensing code with enhanced notation: #24");
+const fields1 = ['firstName', 'lastName', 'phoneNumber'];
+const props = { fields1 };
+
+
+console.log("---Literals in fucntions: #25");
+const canvasDimensions = function(width, initialHeight) {
+  const height = initialHeight * 9 /16;
+  return { 
+    width, 
+    height 
+  };
+}
+
+
+console.log("---Refactor to use enhanced literal notation: #26");
+const color = 'red';
+const Car = {
+  color,
+  drive: function() {
+    return 'Vroom!';
+  },
+  getColor: function() {
+    return this.color;
+  }
+};
+
+
+console.log("---Using default arguments: #27");
+function sum(a =0, b=0) {
+  return a + b;
+}
+
+
+console.log("---Dumping unused code: #28");
+function addOffset(style = {}) {
+  style.offset = '10px'; 
+  return style;
+}
+
+
+console.log("---Many Many arguments: #29");
+function product(...numbers3) { 
+  return numbers3.reduce(function(acc, number) {
+    return acc * number;
+  }, 1)
+}
+
+
+console.log("---Spreading arrays: #30");
+function join(array1, array2) {
+  return [...array1, ...array2]
+}
+
+
+console.log("---Mixing rest & spread: #31");
+function unshift(array, ...array2) {
+  return [...array2, ...array]
+}
+
+
+console.log("---Destructuring in practise: #32");
+const profile1 = {
+  title: 'Engineer',
+  department: 'Engineering'
+};
+function isEngineer({department, title}) {
+  return title === 'Engineer' && department === 'Engineering';
+}
+
+
+console.log("---Array destructuring in practise: #33");
+const classes = [
+  [ 'Chemistry', '9AM', 'Mr. Darnick' ],
+  [ 'Physics', '10:15AM', 'Mrs. Lithun'],
+  [ 'Math', '11:30AM', 'Mrs. Vitalis' ]
+];
+
+const classesAsObject = classes.map((classi) => {
+    const [subject, time, teacher] = [...classi];
+    return {subject:subject, time:time, teacher:teacher}
+});
+/*advanced sol with  enhanced array literal: best solution
+const classesAsObject = classes.map(([subject, time, teacher]) => {
+    return {subject, time, teacher}
+});
+ */
+console.log(classesAsObject);
+
+
+console.log("---Recursion with destructuring: #34");
+/*old way es5
+const numbers4 = [1, 2, 3];
+let numdouble=[]; var i=0;
+function double(number) {
+  numdouble.push(2*number);
+}
+
+for(;i<numbers4.length;i++){
+  double(numbers4[i]);
+}
+console.log(numdouble);
+*/
+
+/*Using array destructuring, recursion & rest/spread operator */
+//use number variable in udemy code instead of numbers5
+const numbers5 = [1, 2, 3];
+
+let numdouble=[]; var l=numbers5.length; var i=0;
+function double(numbers) {
+  if(i<l){  numdouble.push(numbers[i]*2); i++; double(numbers); }
+  else { 
+      return [...numdouble];
+  }
+}
+double(numbers5);
+console.log(numdouble); 
+
+
