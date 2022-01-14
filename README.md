@@ -1,6 +1,6 @@
-#Refer the link for code challemges solved from udemy course and received certificate.
+# Refer the link for code challemges solved from udemy course and received certificate.
 
-[2. ES6 JavaScript: The complete developers guide](https://github.com/niteshpatare/The-Complete-Javascript-Course-Udemy-Self-Relearn-Curve/blob/2336c8168c3c32d38493bd234729f7e1dd3417c1/Coding%20challlenge%20-ES6-Complete-Developers-Guide%20New%20Course/starter/index.html), Completed the Udemy course together with the author and solving all challenges and the assignments together.
+[2. ES6 JavaScript: The complete developers guide](https://github.com/niteshpatare/The-Complete-Javascript-Course-Udemy-Self-Relearn-Curve/tree/2336c8168c3c32d38493bd234729f7e1dd3417c1/Coding%20challlenge%20-ES6-Complete-Developers-Guide%20New%20Course/starter), Completed the Udemy course together with the author and solving all challenges and the assignments together.
 
 
 
